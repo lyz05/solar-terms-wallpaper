@@ -9,7 +9,7 @@ def getJieQiName(date):
          
     day = sxtwl.fromSolar(date.year, date.month, date.day)
     s = "公历:%d年%d月%d日" % (day.getSolarYear(), day.getSolarMonth(), day.getSolarDay())
-    # print(s)
+    print(s)
     # 查找某日前后的节气,此例为之后，之前把after替换成before
     while True:
         # hasJieQi的接口比getJieQiJD速度要快，你也可以使用getJieQiJD来判断是否有节气。
@@ -26,4 +26,5 @@ def getJieQiName(date):
      
 
 jieqiname = getJieQiName(datetime.datetime.now())
+print('节气：{}'.format(jieqiname))
 shutil.copyfile('./image/{}.jpg'.format(jieqiname), './now.jpg')

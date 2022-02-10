@@ -23,5 +23,6 @@ jobs:
         run: |
           git config --global user.name 'lyz05'
           git config --global user.email '294068487@qq.com'
-          git commit -am "Update image"
+          git add -A
+          git commit -m "Update image"
           git push
